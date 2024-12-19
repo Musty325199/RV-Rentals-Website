@@ -1,0 +1,50 @@
+import React, { useState } from 'react';
+import 'tailwindcss/tailwind.css';
+
+const Carousel = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === images.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  return (
+    <div className="relative w-full h-64 overflow-hidden">
+      <div
+        className="flex transition-transform duration-500"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Slide ${index}`}
+            className="w-full h-full object-cover"
+          />
+        ))}
+      </div>
+      <button
+        onClick={prevSlide}
+        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2"
+      >
+        &#9664;
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2"
+      >
+        &#9654;
+      </button>
+    </div>
+  );
+};
+
+export default Carousel;
