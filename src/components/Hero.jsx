@@ -12,7 +12,7 @@ const Hero = () => {
             RV Rentals in California
           </h1>
           <div className="bg-transparent md:flex-row rounded-[45px] flex-col justify-between w-full md:bg-white md:w-[950px] md:mt-7 px-0 md:px-5 flex md:items-center py-4 text-black ">
-            <p className="w-2/4 leading-5 font-semibold text-lg md:text-2xl text-white md:text-black">
+            <p className="w-full leading-5 font-semibold text-lg md:text-2xl text-white md:text-black">
               Travel The Way You Want It
             </p>
             <button

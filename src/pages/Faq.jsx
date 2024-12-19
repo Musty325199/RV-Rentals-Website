@@ -17,7 +17,7 @@ const Faq = () => {
           <h1 className="text-3xl md:mt-0 mt-[4.5rem] md:text-8xl font-semibold animate-drop-down duration-300">
             FAQ
           </h1>
-          <p className="text-[13px] md:font-semibold md:text-lg md:w-2/4 animate-drop-down duration-300">
+          <p className="w-full text-[10px] font-semibold md:text-lg md:w-2/4 animate-drop-down duration-300">
             RVs Rentals allow customers to rent vehicles, such as cars, vans,
             trucks, or SUVs, typically on a daily or weekly basis. Well-known
             examples include Enterprise Rent-A-Car, Hertz, and Avis.
